@@ -1,5 +1,3 @@
-import React from "react";
-
 export default class Board {
 	constructor(rowCount, colCount) {
 		this.grid = new Array(rowCount);
@@ -15,7 +13,7 @@ export default class Board {
 
 	hasHorizontalLine(i, j) {
 		for (let k = 0; k < this.grid[i].length; k++) {
-			if (this.grid[i][k] != this.grid[i][j]) {
+			if (this.grid[i][k] !== this.grid[i][j]) {
 				return false;
 			}
 		}
@@ -54,7 +52,7 @@ export default class Board {
 		let l = 0;
 
 		while (this.isWithinBounds(k, l)) {
-			if (this.grid[k][l] != this.grid[i][j]) {
+			if (this.grid[k][l] !== this.grid[i][j]) {
 				return false;
 			}
 

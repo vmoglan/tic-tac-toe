@@ -18,7 +18,7 @@ class GameUI extends React.Component {
 		return (
 			<div className="game">
 				<div className="game-board">
-					<Board
+					<BoardUI
 						key="board"
 						ref={this.boardRef}
 						handleSquareClick={this.handleSquareClick}

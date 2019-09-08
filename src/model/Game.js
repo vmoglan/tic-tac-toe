@@ -1,6 +1,3 @@
-import Board from "./Board";
-import React from "react";
-
 export default class Game {
 	constructor(board) {
 		this.board = board;
