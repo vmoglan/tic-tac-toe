@@ -2,14 +2,10 @@ import React from "react";
 import SquareUI from "./SquareUI";
 
 class BoardUI extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		const rows = [];
 
-		for (let i = 0; i < this.props.rowCount; i++) {
+		for (let i = 0; i < this.props.board.length; i++) {
 			rows.push(this.renderRow(i));
 		}
 
@@ -19,7 +15,7 @@ class BoardUI extends React.Component {
 	renderRow(i) {
 		const cells = [];
 
-		for (let j = 0; j < this.props.rowCount; j++) {
+		for (let j = 0; j < this.props.board[i].length; j++) {
 			cells.push(this.renderSquare(i, j));
 		}
 
@@ -30,7 +26,7 @@ class BoardUI extends React.Component {
 		return (
 			<SquareUI
 				key={`square${i + j}`}
-				game={this.props.game}
+				board={this.props.board}
 				i={i}
 				j={j}
 				handleSquareClick={this.props.handleSquareClick}
